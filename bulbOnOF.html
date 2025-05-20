@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Bulb Toggle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        img {
+            width: 150px;
+            margin: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Light Bulb Toggle 💡</h2>
+    
+    <!-- Light Bulb Image -->
+    <img id="bulbImage" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="Light Bulb">
+    
+    <!-- Button to Toggle Bulb -->
+    <button id="toggleButton">Turn ON</button>
+
+    <script>
+        let bulbImage = document.getElementById("bulbImage");
+        let toggleButton = document.getElementById("toggleButton");
+
+        toggleButton.addEventListener("click", function() {
+            if (bulbImage.src.includes("pic_bulboff.gif")) {
+                bulbImage.src = "https://www.w3schools.com/js/pic_bulbon.gif";
+                toggleButton.textContent = "Turn OFF";
+            } else {
+                bulbImage.src = "https://www.w3schools.com/js/pic_bulboff.gif";
+                toggleButton.textContent = "Turn ON";
+            }
+        });
+    </script>
+
+</body>
+</html>
